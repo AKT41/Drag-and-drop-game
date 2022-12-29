@@ -1,0 +1,127 @@
+#items,
+#targets {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item,
+.target {
+  width: 100px;
+  height: 100px;
+  background-color: #ccc;
+  color: black;
+  text-align: center;
+  line-height: 100px;
+  font-size: 24px;
+  border: 1px solid black;
+  margin: 10px;
+  padding: 10px;
+  z-index: 1;
+}
+
+.item {
+  cursor: grab;
+}
+
+.item:active {
+  cursor: grabbing;
+}
+
+.item.matched,
+.target.matched {
+  background-color: green;
+}
+
+.item.mismatched,
+.target.mismatched {
+  background-color: red;
+}
+
+.data1 {
+  z-index: -1;
+}
+
+hr {
+  height: 6px;
+  background-color: red;
+}
+
+h1 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  text-transform: capitalize;
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+  margin: .2rem;
+  padding: .2rem;
+  text-transform: uppercase;
+}
+
+button {
+  display: block;
+  width: 75px;
+  height: 50px;
+  background-color: #ccc;
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+  margin: 0 auto;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(116, 110, 110);
+  color: #fff;
+  border: 2px solid rgb(0, 0, 0);
+  transition: none;
+
+}
+
+button:active {
+  background-color: rgb(116, 110, 110);
+  color: #fff;
+  transform: translateY(-3px) ;
+  transition: none;
+}
+
+/* media query full max-width:768*/
+@media screen and (max-width: 768px) {
+  button {
+    display: block;
+    width: 50px;
+    height: 35px;
+    background-color: #ccc;
+    /* line-height: 100px; */
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    margin: auto auto;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .item,
+  .target {
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    font-size: 12px;
+  }
+
+  /* .item {
+    z-index: 1;
+  }
+
+  .target {
+    z-index: 2;
+  } */
+}
